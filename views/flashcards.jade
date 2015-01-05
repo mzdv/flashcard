@@ -1,0 +1,11 @@
+extends layout
+
+block content
+   h1 List of all flashcards:
+   div
+      ul
+         each flashcard in flashcards
+            li(class="flashcard")
+               a(href=('/' + flashcard.id)) #{flashcard.question}
+               br
+               a(href=('/' + flashcard.id + '/solution')) View solution
