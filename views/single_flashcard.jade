@@ -1,0 +1,11 @@
+//
+   Created by Milos on 6.1.2015..
+
+extends layout
+
+block content
+   div(class="question")
+      h1 #{flashcard.question}
+   a(href=('/' + flashcard.id + '/answer')) Check answer
+   br
+   a(href='/') Return back
