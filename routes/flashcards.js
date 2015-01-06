@@ -4,22 +4,12 @@
 var express = require("express");
 var router = express.Router();
 
+var mock_data = require("./mockData");
+
 router
     .get('/', function(req, res) {
         res.render("flashcards", {
-            flashcards: [
-                {
-                    id: '1',
-                    question: "This is flashcard number one",
-                    answer: "This is answer to flashcard number one"
-                },
-
-                {
-                    id: '2',
-                    question: "This is flashcard number two",
-                    answer: "This is answer to flashcard number two"
-                }
-            ]
+            flashcards: mock_data
         })
     })
     .get('/:id', function(req, res) {
