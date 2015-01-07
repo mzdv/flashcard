@@ -5,7 +5,5 @@ extends layout
 
 block content
    div(class="question")
-      h1 #{flashcard.question}
-   a(href=('/' + flashcard.id + '/answer')) Check answer
-   br
+      h1 #{flashcard.answer}
    a(href='/') Return back
